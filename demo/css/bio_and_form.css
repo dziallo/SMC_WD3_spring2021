@@ -1,0 +1,131 @@
+
+
+/*ARTIST BIO*/
+
+#bio-container {
+	float: left;
+	margin: 7.5%;
+}
+
+
+	#bio-container>img {
+		width: 50%;
+		height: auto;
+		float: left;
+		padding: 0 7vw 3vw 0;
+	}
+
+
+#bio {
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-size: 3vw;
+	color: #ababab;
+	text-align: justify;
+}
+
+
+
+/*CONTACT FORM*/
+
+#form-container {
+	margin: 7.5%;
+}
+
+
+	form>p {
+		display: block;
+		font-family: 'Roboto';
+		font-weight: 300;
+		font-size: 5vw;
+		color: #ababab;
+		text-align: left;
+		margin: 0 0 5% 0;
+}
+
+input {
+	width: 100%;
+	height: 15%;
+    margin: 0 0 5% 0;
+    font-size: 5vw;
+}
+
+label {
+	font-family: 'Roboto';
+	font-weight: 100;
+	font-size: 3.8vw;
+	color: #ababab;
+	text-align: left;
+}
+
+#submit {
+	width: 25%;
+	margin: 5% 0 0 0;
+}
+
+#message {
+	width: 100%;
+	height: 15%;
+    margin: 0 0 5% 0;
+    font-size: 5vw;
+	padding: 0 0 20% 0;
+}
+
+
+
+
+/*  Tablet Media Breakpoint  */
+@media screen and (min-width: 768px) (max-width: 1151px) {
+
+  #bio {
+	font-size: 2vw;
+  }
+
+
+}
+
+
+
+/*  Laptop Media Breakpoint  */
+@media screen and (min-width: 1152px) {
+	
+	#bio-container>img {
+		width: 25%;
+		padding: 0px 3vw 3vw 0;
+	}
+
+	#bio {
+		 font-size: 1em;
+		 color: #cecece;
+		 font-weight: 300;
+	}
+
+	form>p {
+		font-size: 3vw;
+		color: #cecece;
+	}
+
+	label {
+		font-weight: 300;
+		font-size: 1.8vw;
+		color: #cecece;
+	}
+
+	input {
+		width: 50%;
+		font-size: 2vw;
+	}
+
+	#message {
+		padding: 0;
+    	font-size: 2vw;
+    	height: 25vh;
+	}
+
+	#submit {
+		margin: 0;
+	}
+}
+
+
+

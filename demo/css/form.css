@@ -1,0 +1,49 @@
+#bio-container {
+	float: left;
+	margin: 7.5%;
+}
+
+	#bio-container>h1 {
+		display: block;
+		font-family: 'Roboto';
+		font-weight: 100;
+		font-size: 7.8vw;
+		color: #ababab;
+		text-align: left;
+		margin: 0 0 5% 0;
+	}
+
+	#bio-container>img {
+		width: 50%;
+		height: auto;
+		float: left;
+		padding: 0 7vw 3vw 0;
+	}
+
+
+#bio {
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-size: 3vw;
+	color: #ababab;
+	text-align: justify;
+}
+
+
+#form-container {
+	margin: 7.5%;
+}
+
+
+
+
+
+	form>p {
+		display: block;
+		font-family: 'Roboto';
+		font-weight: 100;
+		font-size: 7.8vw;
+		color: #ababab;
+		text-align: left;
+		margin: 0 0 5% 0;
+}
