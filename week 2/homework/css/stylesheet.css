@@ -1,27 +1,14 @@
 
-/*
-nav {
-	display: inline;
-}*/
-
 .navbar navbar-expand-lg navbar-light bg-light {
 	align-items: center;
 	text-decoration: none;
 }
 
-.img-fluid {
-	width: 100vw;
-	overflow: hidden;
+body {
+	background-color: #C9DCD3;
 }
-
-
-
-
 
 @media screen and (min-width: 768px) {
 
-.container {
-	display: flex;
-}
 
 }
