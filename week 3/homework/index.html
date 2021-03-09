@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <style>
+        .jumbotron {
+            background-position: center;
+            background-size: cover; 
+            background-repeat: no-repeat;
+        }
+    </style>
+    <title>Jumbotron and featurettes</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <section class="py-5 text-xl-center container-fluid jumbotron"
+            style="background-image: url(https://images.unsplash.com/photo-1493606278519-11aa9f86e40a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Café Java</h1>
+                    <p class="lead text-muted">Caffeine, black, cultivar coffee grounds seasonal grounds. Ut id, sugar, extra , flavour in organic froth crema fair trade. So medium seasonal, so froth caffeine bar.</p>
+                    <p>
+                        <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="container">
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">20% off Lattes<span class="text-muted"></span></h2>
+                    <p class="lead">Every Tuesday, 2 - 4 pm.
+                    <br>
+                    Skinny steamed mocha strong blue mountain.</p>
+                </div>
+                <div class="col-md-5">
+                    <picture>
+                        <source media="(min-width: 1400px)" srcset="imgs/latte.jpeg">
+                        <source media="(min-width: 992px)" srcset="imgs/latte500.png">
+                        <source media="(min-width: 768px)" srcset="imgs/latte350.png">
+                        <img src="imgs/latte.jpeg" alt="Latte" class="img-fluid">
+                    </picture>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">2 for 1 Croissants<span class="text-muted"></span></h2>
+                    <p class="lead">Every Friday, 1 - 3 pm
+                    <br>
+                    Rich mazagran, coffee black trifecta qui.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <picture>
+                        <source media="(min-width: 1400px)" srcset="imgs/croissant.jpeg">
+                        <source media="(min-width: 992px)" srcset="imgs/croissant.jpeg">
+                        <source media="(min-width: 768px)" srcset="imgs/croissant350.png">
+                        <img src="imgs/croissant.jpeg" alt="Croissant" class="img-fluid">
+                    </picture>
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Buy one pound of coffee beans, get the second 50% off!<span class="text-muted"></span></h2>
+                    <p class="lead">Cappuccino milk, blue mountain frappuccino galão, pumpkin spice wings aged single origin extra  doppio. Froth, con panna fair trade coffee chicory robust cappuccino.</p>
+                </div>
+                <div class="col-md-5">
+                    <picture>
+                        <source media="(min-width: 1400px)" srcset="imgs/coffee.jpeg">
+                        <source media="(min-width: 992px)" srcset="imgs/coffee500.png">
+                        <source media="(min-width: 768px)" srcset="imgs/coffee350.png">
+                        <img src="imgs/coffee.jpeg" alt="Coffee beans" class="img-fluid">
+                    </picture>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <!-- /END THE FEATURETTES -->
+        </section>
+
+        <section class="container">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                          <th scope="col">Drink</th>
+                          <th scope="col">Small</th>
+                          <th scope="col">Medium</th>
+                          <th scope="col">Large</th>
+                        </tr>
+                    </thead>
+                <tbody>
+
+                    <tr>
+                      <th scope="row">Cup of Coffee</th>
+                      <td>$2</td>
+                      <td>$2.50</td>
+                      <td>$3</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Americano</th>
+                      <td>$2.50</td>
+                      <td>$3</td>
+                      <td>$4</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Latte</th>
+                      <td>$3</td>
+                      <td>$3.50</td>
+                      <td>$5</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Cappucino</th>
+                      <td>$2.50</td>
+                      <td>$3</td>
+                      <td>$4</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Food</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    <tr>
+                      <th scope="row">Plain Bagel</th>
+                      <td>$2</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Blueberry Bagel</th>
+                      <td>$2.50</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Croissant</th>
+                      <td>$2</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Chocolate Croissant</th>
+                      <td>$2.50</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Coffee Cake</th>
+                      <td>$3</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row"></th>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row"></th>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <nav class="navbar fixed-bottom navbar-light bg-light">
+              <div class="container-fluid justify-content-start">
+                <a class="navbar-brand" href="#">Café Java</a>
+                    <a href="https://www.facebook.com/" target="_blank">
+                      <img src="imgs/fb.png" alt="facebook icon" style="width:20px;height:20px;">
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank">
+                      <img src="imgs/instagram.png" alt="instagram icon" style="width:20px;height:20px;">
+                    </a>
+
+                    <a href="https://www.twitter.com/" target="_blank">
+                      <img src="imgs/twitter.png" alt="twitter icon" style="width:20px;height:20px;">
+                    </a>
+
+              </div>
+            </nav>
+        </section>
+
+    </main>
+    <footer></footer>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
