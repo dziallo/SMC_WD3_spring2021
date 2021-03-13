@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway&display=swap');
+
+@font-face {
+    font-family: 'Dancing Script';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.navbar {
+    font-family: "Raleway";
+}
+
+.jumbotron {
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    height: 120vh;
+}
+
+.card {
+    padding: 0;
+    margin: 1rem;
+    background-color: #3B8AA2;
+    color: #B0CBD4;
+    font-family: Raleway;
+}
+
+.col {
+    background-color: #EAEBED;
+}
+
+nav ul {
+    font-size: 30px;
+    list-style: none;
+    padding: 0px;
+}
+
+/*nav ul li {
+    background-color: #006989;
+}*/
+
+body {
+        background-color: #EAEBED;
+}
+
+article {
+    padding: 4rem;
+}
+
+
+article>h1 {
+    text-align: center;
+    color: #006989;
+}
+
+h1 {
+    font-family: Dancing Script;
+    padding-top: 3rem;
+    font-size: 5rem;
+    text-align: center;
+    color: #75AABB;
+}
+
+h4 {
+    text-align: center;
+    font-family: Raleway;
+    color: #3B8AA2;
+}
+
+h5 {
+    text-align: center;
+    font-family: Dancing Script;
+    font-size: 2rem;
+    color: #EAEBED;
+}
+
+/*  Tablet Media Breakpoint  */
+@media screen and (min-width: 768px) (max-width: 1151px) {
+
+h1 {
+    font-family: Dancing Script;
+    padding-top: 3rem;
+    font-size: 10rem;
+    text-align: center;
+    color: #75AABB;
+}
+
+}
+
+
+
+/*  Laptop Media Breakpoint  */
+@media screen and (min-width: 1152px) {
+
+h1 {
+    font-family: Dancing Script;
+    padding-top: 0rem;
+    font-size: 7rem;
+    text-align: center;
+    color: #75AABB;
+}
+
+}
