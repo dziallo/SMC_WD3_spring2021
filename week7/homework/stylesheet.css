@@ -1,10 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Montserrat:wght@200;400;600&display=swap');
+
+@font-face {
+    font-family: 'Caveat';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Caveat';
+    font-weight: 600;
+    font-style: medium;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 200;
+    font-style: thin;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-style: medium;
+    font-display: swap;
+}
+
+
+
+
+body {
+    background-color: #F7F7FF;
+}
+
 
 main {
     align-items: center;
 }
 
-h1,h4 {
+h1 {
     text-align: center;
+    font-size: 3rem;
+    font-family: Caveat;
+}
+    .episodes>h1 {
+        color: white;
+    }
+
+h4 {
+    text-align: center;
+    font-family: Montserrat;
+    color: #577399;
+}
+
+.navbar {
+    font-family: Montserrat;
+    color: #4C5D6B;
+}
+
+    .bg-light {
+        background-color: #fff!important;
+    }
+
+/*FOOTER*/
+
+    .navbar-brand {
+        font-family: 'Caveat';
+        color: #4C5D6B!important;
+        font-size: 1.7rem;
+         margin-right: 1.5rem;
+    }
+
+    .icons {
+        margin: 0rem 1.1rem 0rem 1.1rem;
+    }
+
+
+
+.button-container {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.btn-primary {
+    margin: .5rem 0.5rem 1.5rem 0rem;
+    color: #577399;
+    background-color: #fff;
+    border-color: #577399;
+}
+
+    .btn-primary:focus {
+        color: #fff;
+        background-color: #577399;
+        border-color: #4C5D6B;
+        box-shadow: #577399;
+    }
+
+.btn-secondary {
+    margin: .5rem 0.5rem 1.5rem 0rem;
 }
 
 .caption {
@@ -12,28 +114,107 @@ h1,h4 {
     margin: 1.55rem 5rem 1.5rem 5rem;
 }
 
-.homepage {
-    color: lightblue;
+.title {
+    color: #4C5D6B;
+    margin: 1rem;
+}
+
+.title2 {
+    color: #F7F7FF;
+    margin: 1rem;
+}
+
+    .title2>h4 {
+        color: #BDD5EA;
+    }
+
+
+/*CARDS*/
+
+
+.episode-cards {
+    width: 60vw;
+    text-align: left;
+    border-color: #fff;
+}
+
+.card-container {
+    text-align: -webkit-center;
+    margin-top: 5rem;
+}
+
+.card-body {
+    padding: 1rem 1rem .1rem 1rem;
+    margin: 0rem 0rem 4rem 0rem;
+    background: #fff;
+}
+
+    .card-title {
+        font-family: 'Caveat';
+        font-size: 2rem;
+        color: #4C5D6B;
+    }
+
+    .card-text {
+        font-family: 'Montserrat';
+        color: #4C5D6B;
+    }
+
+    .post-date {
+        font-family: 'Montserrat';
+        color: #8E9FB8;
+        text-decoration: underline;
+        font-size: .8rem;
+    }
+
+
+.lead {
+    padding: 1rem 1rem .1rem 1rem;
+}
+
+.image-container {
+    display: block;
+}
+
+.carousel-caption {
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    font-weight: medium;
+    color: black!important;
+}
+
+.carousel-caption2 {
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: black!important;
+}
+
+.carousel-caption2 {
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: black!important;
+}
+
+
+/*  Tablet Media Breakpoint  */
+@media screen and (min-width: 768px) (max-width: 1151px) {
+    .episode-cards {
+        padding: 5rem;
+
+    }
+
+    .card-container {
+        width: 30vw;
+    }
+
+
 }
 
 
 
-@media (max-width:575px) {
-    .display-4 {
-        font-size: 1.5rem;
-    }
-    .day h5 {
-        background-color: #f8f9fa;
-        padding: 3px 5px 5px;
-        margin: -8px -8px 8px -8px;
-    }
-    .date {
-        padding-left: 4px;
-    }
-}
+/*  Laptop Media Breakpoint  */
+@media screen and (min-width: 1152px) {
 
-@media (min-width: 576px) {
-    .day {
-        height: 14.2857vw;
-    }
+
+
 }
