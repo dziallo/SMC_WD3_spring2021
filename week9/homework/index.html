@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, intial-scale=1.0">
+			
+		    <!-- Bootstrap CSS -->
+		    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+			<title>Transformations & Transitions</title>
+
+			<style> 
+				
+				/*NAV*/
+
+				.bg-light {
+        			background: rgb(158,255,253);
+					background: linear-gradient(90deg, rgba(158,255,253,1) 0%, rgba(255,140,255,1) 100%)!important;
+				}
+
+				ul {
+		            list-style: none;
+		            padding-left: 0px;
+		        }
+
+		        ul li {
+		            display: inline-block;
+		            padding: 5px 20px;
+		            background-color: transparent;
+		            transition: 500ms;
+		        }
+
+		        ul li:hover {
+		            background-color: #ff8cff;
+		            transition: 500ms;
+		        }
+
+		        a {
+		            text-decoration: none;
+		        }
+
+
+		        /*IMAGES*/
+
+		        .color1,
+		        .color2,
+		        .color3,
+		        .pattern1,
+		        .pattern2,
+		        .pattern3 {
+		        	height: auto;
+		        	width: auto;
+		        	margin: 2rem;
+		        }
+
+				.color1:hover {
+					transform: rotate(360deg);
+					transition: 4s;
+				}
+
+				.color2:hover {
+					transform: matrix(-.5, 0, 0, -.5, .5, .5);
+					transition: 2s;
+				}
+
+				
+				.color3:hover {
+					transform: matrix(1.5, 0, 0, 1.5, .2, .2);
+					transition: 2s;
+				}
+
+				.pattern1:hover {
+					transform: rotate(-360deg);
+					transition: 4s;
+				}
+
+				.pattern2:hover {
+					transform: matrix(-1.5, 0, 0, -1.5, .5, .5);
+					transition: 2s;
+				}
+
+				.pattern3:hover {
+					transform: matrix(.5, 0, 0, .5, .2, .2);
+					transition: 2s;
+				}
+
+				.navbar-brand:focus {
+					transform: rotate(360deg);
+					transition: 3s;
+				}
+
+			</style>
+		</head>
+		<body>
+			<header>
+		        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		            <div class="container-fluid">
+		            	<a class="navbar-brand" href="#">
+	                    <img src="imgs/logo.png" alt="logo" class="img-fluid"/></a>
+		                
+		                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		                    <span class="navbar-toggler-icon"></span>
+		                </button>
+		                
+		                
+		                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		                        <li class="nav-item">
+		                            <a class="nav-link active" aria-current="page">Page 1</a>
+		                        </li>
+		                        <li class="nav-item">
+		                            <a class="nav-link" href=" ">Page 2</a>
+		                        </li>
+		                        <li class="nav-item">
+		                            <a class="nav-link" href=" ">Page 3</a>
+		                        </li>
+		                    </ul>          
+		                </div>
+		            </div>
+		        </nav>
+    		</header>
+
+    		<main>
+		        <div class="container">
+		          	<div class="row justify-content-start">
+
+		          		<div class="color1">
+			            	<div class="col-12 col-md-4">
+		              			<img src="imgs/color1.jpg" alt="purple swirl"/>
+		            		</div>
+		            	</div>
+			            <div class="color2">
+				            <div class="col-12 col-md-4">
+			              		<img src="imgs/color2.jpg" alt=" "/>
+			            	</div>
+			        	</div>
+				        
+						<div class="color3">
+				            <div class="col-12 col-md-4">
+				            	<img src="imgs/color3.jpg" alt=" "/>
+			            	</div>
+			        	</div>
+				        <div class="pattern1">    
+				        	<div class="col-12 col-md-4">
+			              		<img src="imgs/pattern1.jpg" alt=" "/>
+			            	</div>
+			        	</div>
+			        	<div class="pattern2">
+			            	<div class="col-12 col-md-4">
+				            	<img src="imgs/pattern2.jpg" alt=" "/>
+			            	</div>
+			        	</div>
+				        <div class="pattern3">    
+				            <div class="col-12 col-md-4">
+				            	<img src="imgs/pattern3.jpg" alt=" "/>
+			            	</div>
+			        	</div>
+		          	</div>
+		        </div>
+		    </main>
+		</body>
+	</html>

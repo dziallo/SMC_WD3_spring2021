@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Transformations examples</title>
+
+        <style>
+
+            body {
+                margin: 0px;
+            }
+
+            section div{
+                height: 300px;
+                width: 300px;
+            }
+
+
+
+            .translate,
+            .rotate,
+            .scale {
+                position: relative;
+            }
+
+
+            .rotate {
+                top: 500px;
+            }
+
+            .scale {
+                top: 1000px;
+                left: 200px;
+            }
+
+
+
+            .translate div {
+                background-color: rgba(255, 0, 0, .2);
+            }
+
+            .rotate div {
+                background-color: rgba(0, 255, 0, .2);
+            }
+
+            .scale div {
+                background-color: rgba(0, 0, 255, .2);
+            }
+
+
+
+                .original,
+                .translated,
+                .rotated,
+                .scaled {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(255, 0, 0, .2);
+                }
+
+
+
+                .translated {
+                    transform: translate(50px, 50%);
+                }
+
+                .rotated {
+                    transform: rotate(45deg);
+                }
+
+                .scaled {
+                    transform: scale(120%, 150%);
+                }
+
+        </style>
+    </head>
+    <body>
+        <section class="translate">
+            <div class="original">
+                <p>Hello world!</p>
+            </div>
+            <div class="translated">
+                <p>Hello world!</p>
+            </div>
+        </section>
+
+        <section class="rotate">
+            <div class="original">
+                <p>Hello world!</p>
+            </div>
+            <div class="rotated">
+                <p>Hello world!</p>
+            </div>
+        </section>
+
+        <section class="scale">
+            <div class="original">
+                <p>Hello world!</p>
+            </div>
+            <div class="scaled">
+                <p>Hello world!</p>
+            </div>
+        </section>
+    </body>
+</html>
