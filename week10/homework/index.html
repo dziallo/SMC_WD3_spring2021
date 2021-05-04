@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	    <!-- Bootstrap CSS -->
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+	    <title>Animation Example</title>
+
+	    <style>
+
+
+	    	/*NAV*/
+
+    		.bg-light {
+    			background: transparent!important;
+				animation-name: slideInNav;
+	    		animation-delay: 5s;
+	    		animation-duration: 1.5s;
+	    		animation-fill-mode: both;
+			}
+
+			ul {
+	            list-style: none;
+	            padding: 0px 0px 0px 0px;
+	        }
+
+	        ul li {
+	            display: inline-block;
+	            padding: 0px 15px;
+	            background-color: transparent;
+	            transition: 500ms;
+	        }
+
+	        ul li:hover {
+	            background-color: #48BFE3;
+	            transition: 500ms;
+	        }
+
+	        a {
+	            text-decoration: none;
+	        }
+
+	        .navbar-brand:focus {
+					transform: rotate(360deg);
+					transition: 2s;
+				}
+
+
+
+	       /* STRIPS*/
+
+	    	[class^="strip"] {
+	    		width: 100vw;
+	    		height: 10vh;
+	    		position: absolute;
+	    	}
+
+	    	body {
+	    		margin: 0%;
+	    		overflow: hidden;
+	    	}
+	        
+	    	.strip1 {
+	    		background-color: #80FFDB;
+	    		top: 0;
+	    		animation-name: moveDown;
+	    		animation-duration: 500ms;
+	    		animation-fill-mode: both;
+	    		z-index: -1;
+	    	}
+
+	    	.strip2 {
+	    		background-color: #72EFDD;
+	    		top: 10vh;
+	    		animation-name: moveDown2;
+	    		animation-delay: 500ms;
+	    		animation-duration: 500ms;
+	    		animation-fill-mode: both;
+	            z-index: -2;
+	    	}
+
+	    	.strip3 {
+	    		background-color: #64DFDF;
+	    		top: 20vh;
+	    		animation-name: moveDown3;
+	    		animation-delay: 1s;
+	    		animation-duration: 500ms;
+	    		animation-fill-mode: both;
+	    		z-index: -3;
+	    	}
+
+	    	.strip4 {
+	    		background-color: #56CFE1;
+	    		top: 30vh;
+	    		animation-name: moveDown4;
+	    		animation-delay: 1.5s;
+	    		animation-duration: 500ms;
+	    		animation-fill-mode: both;
+	    		z-index: -4;
+	    	}
+
+	    	.strip5 {
+	    		background-color: #48BFE3;
+	    		top: 40vh;
+	    		animation-name: moveDown5;
+	    		animation-delay: 2s;
+	    		animation-duration: 500ms;
+	    		animation-fill-mode: both;
+	    		z-index: -5;
+	    	}
+
+	    	.strip6 {
+	    		background-color: #4EA8DE;
+	    		top: 50vh;
+	    		animation-name: moveDown6;
+	    		animation-delay: 2.5s;
+	    		animation-duration: 500ms;
+	    		animation-fill-mode: both;
+	            z-index: -6;
+	    	}
+
+	    	.strip7 {
+	    		background-color: #5390D9;
+	    		top: 60vh;
+	    		animation-name: moveDown7;
+	    		animation-delay: 3s;
+	    		animation-duration: 500ms;
+	    		animation-fill-mode: both;
+	    		z-index: -7;
+	    	}
+
+	    	.strip8 {
+	    		background-color: #5E60CE;
+	    		top: 70vh;
+	    		animation-name: moveDown8;
+	    		animation-delay: 3.5s;
+	    		animation-duration: 500ms;
+	    		animation-fill-mode: both;
+	    		z-index: -8;
+	    	}
+
+	    	.strip9 {
+	    		background-color: #6930C3;
+	    		top: 80vh;
+	    		animation-name: moveDown9;
+	    		animation-delay: 4s;
+	    		animation-duration: 500ms;
+	    		animation-fill-mode: both;
+	    		z-index: -9;
+	    	}
+
+	    	.strip10 {
+	    		background-color: #7400B8;
+	    		top: 90vh;
+	    		animation-name: moveDown10;
+	    		animation-delay: 4.5s;
+	    		animation-duration: 500ms;
+	    		animation-fill-mode: both;
+	    		z-index: -10;
+	    	}
+
+
+
+	    	@keyframes moveDown {
+	    		from {top: -100%;}
+	    		to {top: 0;}
+	    	}
+
+	    	@keyframes moveDown2 {
+	    		from {top: -100%;}
+	    		to {top: 10vh;}
+
+	    		from {opacity: 0;}
+	            to {opacity: 1; }
+	    	}
+
+	    	@keyframes moveDown3 {
+	    		from {top: -100%;}
+	    		to {top: 20vh;}
+
+	    		from {opacity: 0;}
+	            to {opacity: 1; }
+	    	}
+
+	    	@keyframes moveDown4 {
+	    		from {top: -100%;}
+	    		to {top: 30vh;}
+
+	    		from {opacity: 0;}
+	            to {opacity: 1; }
+	    	}
+
+	    	@keyframes moveDown5 {
+	    		from {top: -100%;}
+	    		to {top: 40vh;}
+
+	    		from {opacity: 0;}
+	            to {opacity: 1; }
+	    	}
+
+	    	@keyframes moveDown6 {
+	    		from {top: -100%;}
+	    		to {top: 50vh;}
+
+	    		from {opacity: 0;}
+	            to {opacity: 1; }
+	    	}
+
+	    	@keyframes moveDown7 {
+	    		from {top: -100%;}
+	    		to {top: 60vh;}
+
+	    		from {opacity: 0;}
+	            to {opacity: 1; }
+	    	}
+
+	    	@keyframes moveDown8 {
+	    		from {top: -100%;}
+	    		to {top: 70vh;}
+
+	    		from {opacity: 0;}
+	            to {opacity: 1; }
+	    	}
+
+	    	@keyframes moveDown9 {
+	    		from {top: -100%;}
+	    		to {top: 80vh;}
+
+	    		from {opacity: 0;}
+	            to {opacity: 1; }
+	    	}
+
+	    	@keyframes moveDown10 {
+	    		from {top: -100%;}
+	    		to {top: 90vh;}
+
+	    		from {opacity: 0;}
+	            to {opacity: 1; }
+	    	}
+
+	    	@keyframes slideInNav {
+	    		from {right: -100%;}
+	    		to {right: 0}
+
+	    		from {opacity: 0;}
+	            to {opacity: 1; }
+	    	}
+
+	    </style>
+	</head>
+	<body>	
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	            <div class="container-fluid">
+	            	<a class="navbar-brand" href="#">
+	                <img src="logo.png" alt="logo" class="img-fluid"/></a>
+	                
+	                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	                    <span class="navbar-toggler-icon"></span>
+	                </button>
+	                
+	                
+	                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	                        <li class="nav-item">
+	                            <a class="nav-link active" aria-current="page">Blue & Purple</a>
+	                        </li>
+	                        <li class="nav-item">
+	                            <a class="nav-link" href=" ">Pink & Green</a>
+	                        </li>
+	                        <li class="nav-item">
+	                            <a class="nav-link" href=" ">Yellow & Red</a>
+	                        </li>
+	                    </ul>          
+	                </div>
+	            </div>
+        	</nav>
+		</header>
+	    <main>
+			<div class="strip1"></div>
+			<div class="strip2"></div>
+			<div class="strip3"></div>
+			<div class="strip4"></div>
+			<div class="strip5"></div>
+			<div class="strip6"></div>
+			<div class="strip7"></div>
+			<div class="strip8"></div>
+			<div class="strip9"></div>
+			<div class="strip10"></div>
+		</main>
+	</body>
+</html>
