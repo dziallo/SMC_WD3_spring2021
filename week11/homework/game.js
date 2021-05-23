@@ -65,7 +65,6 @@ let cVelX = 2;
 let cVelY = 1;
 
 let cRadius= 75;
-
 let currentFillColorIndex = defaultFillColorIndex;
 
 drawFrame();
@@ -81,12 +80,13 @@ canvas.addEventListener("click", function(event){
 
 	if(dist < cRadius){
 		console.log("HIT!!!");
+		cVelX = cVelX * 1.5;
+		cVelY = cVelY * 1.5;
 		if(currentFillColorIndex === (colorPallette.length - 1)) { 
 			currentFillColorIndex = 0;
 		} else {
 			currentFillColorIndex = currentFillColorIndex + 1;
 		}
-
 		circleClicks()
 	}
 })
