@@ -1,0 +1,48 @@
+<script type="text/javascript">
+	$('.carousel').carousel('pause', {
+		interval: 5000
+		})
+
+	document.addEventListener("DOMContentLoaded", function(){
+
+		let cartSize = 0;
+
+		if (localStorage.getItem('shoppingCartSize')) {
+	        cartSize = localStorage.getItem('shoppingCartSize');
+	    }
+
+		$('#unique-shopping-cart').html(String(cartSize))
+	});
+
+	function incrementCart() {
+
+
+		let cartSize = 0;
+		if (localStorage.getItem('shoppingCartSize')) {
+	        cartSize = localStorage.getItem('shoppingCartSize');
+	    }
+
+	    cartSize++;
+
+		localStorage.setItem('shoppingCartSize', cartSize);
+
+	}
+
+	function decrementCart() {
+
+		let cartSize = 0;
+		if (localStorage.getItem('shoppingCartSize')) {
+	        cartSize = localStorage.getItem('shoppingCartSize');
+	    }
+
+	    cartSize--;
+	    
+	    if(cartSize < 0) {
+	    	cartSize = 0;
+	    }
+
+		localStorage.setItem('shoppingCartSize', cartSize);
+
+	}
+
+</script>

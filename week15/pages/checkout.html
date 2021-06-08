@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+        <!-- Font Awesome -->
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+            <!-- Google Fonts -->
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+            <!-- Bootstrap core CSS -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+
+            <!-- Material Design Bootstrap -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+            
+            <link rel="stylesheet" href="../css/styles.css" rel="stylesheet"/>
+
+            <!-- JQuery -->
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <!-- Bootstrap tooltips -->
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+            <!-- Bootstrap core JavaScript -->
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+            <!-- MDB core JavaScript -->
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+            <title>Product Page</title>
+
+            <script type="text/javascript">
+
+            document.addEventListener("DOMContentLoaded", function(){
+
+                let cartSize = 0;
+
+                if (localStorage.getItem('shoppingCartSize')) {
+                    cartSize = localStorage.getItem('shoppingCartSize');
+                }
+
+                $('#unique-shopping-cart').html(String(cartSize))
+            });
+
+            function incrementCart() {
+
+                console.log("increment")
+                let cartSize = 0;
+                if (localStorage.getItem('shoppingCartSize')) {
+                    cartSize = localStorage.getItem('shoppingCartSize');
+                }
+
+                cartSize++;
+
+                localStorage.setItem('shoppingCartSize', cartSize);
+                $('#unique-shopping-cart').html(String(cartSize))
+            }
+
+            function decrementCart() {
+
+                let cartSize = 0;
+                if (localStorage.getItem('shoppingCartSize')) {
+                    cartSize = localStorage.getItem('shoppingCartSize');
+                }
+
+                cartSize--;
+                
+                if(cartSize < 0) {
+                    cartSize = 0;
+                }
+
+                localStorage.setItem('shoppingCartSize', cartSize);
+                $('#unique-shopping-cart').html(String(cartSize))
+            }
+        </script>
+    <title>Checkout</title>
+
+    <style>
+        .btn {
+            color: black;
+            border-color: black;
+            margin-top: 5%;
+        }
+
+        .container {
+            text-align: left;
+            margin: 5%;
+        }
+    </style>
+
+  </head>
+  <body>
+    <header>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                <img src="../imgs/smallbugs/bug-basket.png" alt="logo" class="img-fluid"/></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="checkout.html" class="nav-link navbar-link-2 waves-effect">
+                    <span id="unique-shopping-cart" class="badge badge-pill"></span>
+                            <i class="fas fa-shopping-cart pl-0"></i>
+                            </a>
+                        </li>
+                    </ul>    
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <div class="col">
+            <form action="" method="POST">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 order-md-2 mb-4">
+                          <h4 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted">Your cart</span>
+                            <span class="badge badge-primary badge-pill">2</span>
+                          </h4>
+                          <ul class="list-group mb-3">
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                              <div>
+                                
+                                
+                                <h5 class="my-0">Beetle Art</h5>
+                                <small class="text-muted">15" x 15" framed beetle art</small>
+                                <br>
+                                <img src="../imgs/smallbugs/beetle-art.jpg"
+                                  class="img-fluid z-depth-1">
+                                <br>
+                                <small class="text-danger">Delete item</small>
+                              </div>
+                              <span class="text-muted">$200</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                              <div>
+                                <h5 class="my-0">Death's Head Hawkmoth</h5>
+                                <small class="text-muted">6" x 8" framed pinned Death's Head Hawkmoth</small>
+                                <br>
+                                <img src="../imgs/smallbugs/deaths-head.jpg"
+                                  class="img-fluid z-depth-1">
+                                <br>
+                                <small class="text-danger">Delete item</small>
+                              </div>
+                              <span class="text-muted">$80</span>
+                              <span class="text-muted">$40</span>
+                            </li>
+                            
+                            <li class="list-group-item d-flex justify-content-between">
+                              <span>Total (USD)</span>
+                              <strong>$240</strong>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="col-md-7 order-md-1">
+                          <h4 class="mb-3">SHIPPING ADDRESS</h4>
+                          <form class="needs-validation" novalidate="">
+                            <div class="row">
+                              <div class="col-md-3 mb-3">
+                                <label for="firstName">First name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                                <div class="invalid-feedback">
+                                  Valid first name is required.
+                                </div>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label for="lastName">Last name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                                <div class="invalid-feedback">
+                                  Valid last name is required.
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                  <label for="address">Address</label>
+                                  <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+                                  <div class="invalid-feedback">
+                                    Please enter your shipping address.
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-2 mb-3">
+                                  <label for="address2">Unit #<span class="text-muted"></span></label>
+                                  <input type="text" class="form-control" id="address2" placeholder="APT 1">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-5 mb-3">
+                                <label for="country">Country</label>
+                                <select class="custom-select d-block w-100" id="country" required="">
+                                  <option value="">Choose...</option>
+                                  <option>United States</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Please select a valid country.
+                                </div>
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                <label for="state">State</label>
+                                <select class="custom-select d-block w-100" id="state" required="">
+                                  <option value="">Choose...</option>
+                                  <option>Alabama</option>
+                                  <option>Alaska</option>
+                                  <option>Arizona</option>
+                                  <option>California</option>
+                                  <option>Colorado</option>
+                                  <option>Connecticut</option>
+                                  <option>Delaware</option>
+                                  <option>Florida</option>
+                                  <option>Georgia</option>
+                                  <option>Hawaii</option>
+                                  <option>Idaho</option>
+                                  <option>Illinois</option>
+                                  <option>Indiana</option>
+                                  <option>Iowa</option>
+                                  <option>Kansas</option>
+                                  <option>Kentucky</option>
+                                  <option>Louisiana</option>
+                                  <option>Main</option>
+                                  <option>Maryland</option>
+                                  <option>Massachusets</option>
+                                  <option>Michigan</option>
+                                  <option>Minnesota</option>
+                                  <option>Mississippi</option>
+                                  <option>Missouri</option>
+                                  <option>Montana</option>
+                                  <option>Nebraska</option>
+                                  <option>New Hampshire</option>
+                                  <option>New Jersey</option>
+                                  <option>New Mexico</option>
+                                  <option>New York</option>
+                                  <option>North Carolina</option>
+                                  <option>North Dakota</option>
+                                  <option>Ohio</option>
+                                  <option>Oklahoma</option>
+                                  <option>Oregon</option>
+                                  <option>Pennsylvania</option>
+                                  <option>Rhode Island</option>
+                                  <option>South Carolina</option>
+                                  <option>South Dakota</option>
+                                  <option>Tennessee</option>
+                                  <option>Texas</option>
+                                  <option>Utah</option>
+                                  <option>Vermont</option>
+                                  <option>Virginia</option>
+                                  <option>Washington</option>
+                                  <option>West Virginia</option>
+                                  <option>Wisconsin</option>
+                                  <option>Wyoming</option>
+
+                                </select>
+                                <div class="invalid-feedback">
+                                  Please provide a valid state.
+                                </div>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label for="zip">Zip</label>
+                                <input type="text" class="form-control" id="zip" placeholder="" required="">
+                                <div class="invalid-feedback">
+                                  Zip code required.
+                                </div>
+                              </div>
+                            </div>
+                            <hr class="mb-4">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="same-address">
+                              <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+                            </div>
+                            <hr class="mb-4">
+                        </form>
+
+
+
+
+
+                       
+                            
+                          <h4 class="mb-3">BILLING ADDRESS</h4>
+                          <form class="needs-validation" novalidate="">
+                            <div class="row">
+                              <div class="col-md-3 mb-3">
+                                <label for="firstName">First name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                                <div class="invalid-feedback">
+                                  Valid first name is required.
+                                </div>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label for="lastName">Last name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                                <div class="invalid-feedback">
+                                  Valid last name is required.
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                  <label for="address">Address</label>
+                                  <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+                                  <div class="invalid-feedback">
+                                    Please enter your shipping address.
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-2 mb-3">
+                                  <label for="address2">Unit #<span class="text-muted"></span></label>
+                                  <input type="text" class="form-control" id="address2" placeholder="APT 1">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-5 mb-3">
+                                <label for="country">Country</label>
+                                <select class="custom-select d-block w-100" id="country" required="">
+                                  <option value="">Choose...</option>
+                                  <option>United States</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Please select a valid country.
+                                </div>
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                <label for="state">State</label>
+                                <select class="custom-select d-block w-100" id="state" required="">
+                                  <option value="">Choose...</option>
+                                  <option>Alabama</option>
+                                  <option>Alaska</option>
+                                  <option>Arizona</option>
+                                  <option>California</option>
+                                  <option>Colorado</option>
+                                  <option>Connecticut</option>
+                                  <option>Delaware</option>
+                                  <option>Florida</option>
+                                  <option>Georgia</option>
+                                  <option>Hawaii</option>
+                                  <option>Idaho</option>
+                                  <option>Illinois</option>
+                                  <option>Indiana</option>
+                                  <option>Iowa</option>
+                                  <option>Kansas</option>
+                                  <option>Kentucky</option>
+                                  <option>Louisiana</option>
+                                  <option>Main</option>
+                                  <option>Maryland</option>
+                                  <option>Massachusets</option>
+                                  <option>Michigan</option>
+                                  <option>Minnesota</option>
+                                  <option>Mississippi</option>
+                                  <option>Missouri</option>
+                                  <option>Montana</option>
+                                  <option>Nebraska</option>
+                                  <option>New Hampshire</option>
+                                  <option>New Jersey</option>
+                                  <option>New Mexico</option>
+                                  <option>New York</option>
+                                  <option>North Carolina</option>
+                                  <option>North Dakota</option>
+                                  <option>Ohio</option>
+                                  <option>Oklahoma</option>
+                                  <option>Oregon</option>
+                                  <option>Pennsylvania</option>
+                                  <option>Rhode Island</option>
+                                  <option>South Carolina</option>
+                                  <option>South Dakota</option>
+                                  <option>Tennessee</option>
+                                  <option>Texas</option>
+                                  <option>Utah</option>
+                                  <option>Vermont</option>
+                                  <option>Virginia</option>
+                                  <option>Washington</option>
+                                  <option>West Virginia</option>
+                                  <option>Wisconsin</option>
+                                  <option>Wyoming</option>
+
+                                </select>
+                                <div class="invalid-feedback">
+                                  Please provide a valid state.
+                                </div>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label for="zip">Zip</label>
+                                <input type="text" class="form-control" id="zip" placeholder="" required="">
+                                <div class="invalid-feedback">
+                                  Zip code required.
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <hr class="mb-4">
+
+                            <h4 class="mb-3">Payment</h4>
+
+                            <div class="d-block my-3">
+                              <div class="custom-control custom-radio">
+                                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+                                <label class="custom-control-label" for="credit">Credit card</label>
+                              </div>
+                              <div class="custom-control custom-radio">
+                                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                                <label class="custom-control-label" for="debit">Debit card</label>
+                              </div>
+                              <div class="custom-control custom-radio">
+                                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                                <label class="custom-control-label" for="paypal">Paypal</label>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-7 mb-3">
+                                <label for="cc-name">Name on card</label>
+                                <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                                <small class="text-muted">Full name as displayed on card</small>
+                                <div class="invalid-feedback">
+                                  Name on card is required
+                                </div>
+                              </div>
+                              <div class="col-md-8 mb-3">
+                                <label for="cc-number">Credit card number</label>
+                                <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                                <div class="invalid-feedback">
+                                  Credit card number is required
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-3 mb-3">
+                                <label for="cc-expiration">Expiration</label>
+                                <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                                <div class="invalid-feedback">
+                                  Expiration date required
+                                </div>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label for="cc-expiration">CVV</label>
+                                <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                                <div class="invalid-feedback">
+                                  Security code required
+                                </div>
+                              </div>
+                            </div>
+                            <hr class="mb-4">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Confirm Purchase</button>
+                          </form>
+                        </div>
+                      </div>
+        </div>
+    </div>
+</main>
+<footer></footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        function applyShippingInfoToBilling() {
+            let shippingInfo = {
+                fullName: document.getElementById('fullName').value,
+                userAddress: document.getElementById('userAddress').value,
+                userCity: document.getElementById('userCity').value,
+                userState: document.getElementById('userState').value,
+                userZip: document.getElementById('userZip').value,
+            }
+
+            console.log(
+                shippingInfo
+            )
+
+            document.getElementById('billingName').value = shippingInfo.fullName;
+            document.getElementById('billingAddress').value = shippingInfo.userAddress;
+            document.getElementById('billingCity').value = shippingInfo.userCity;
+            document.getElementById('billingState').value = shippingInfo.userState;
+            document.getElementById('billingZip').value = shippingInfo.userZip;
+
+        }
+
+    </script>
+
+  </body>
+</html>

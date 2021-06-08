@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, intial-scale=1.0">
+			
+				<!-- Font Awesome -->
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+			<!-- Google Fonts -->
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+			<!-- Bootstrap core CSS -->
+			<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+
+			<!-- Material Design Bootstrap -->
+			<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+			
+			<link rel="stylesheet" href="../css/styles.css" rel="stylesheet"/>
+
+			<!-- JQuery -->
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<!-- Bootstrap tooltips -->
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+			<!-- Bootstrap core JavaScript -->
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+			<!-- MDB core JavaScript -->
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+			<title>Product Page</title>
+
+			<script type="text/javascript">
+
+			document.addEventListener("DOMContentLoaded", function(){
+
+				let cartSize = 0;
+
+				if (localStorage.getItem('shoppingCartSize')) {
+			        cartSize = localStorage.getItem('shoppingCartSize');
+			    }
+
+				$('#unique-shopping-cart').html(String(cartSize))
+			});
+
+			function incrementCart() {
+
+				console.log("increment")
+				let cartSize = 0;
+				if (localStorage.getItem('shoppingCartSize')) {
+			        cartSize = localStorage.getItem('shoppingCartSize');
+			    }
+
+			    cartSize++;
+
+				localStorage.setItem('shoppingCartSize', cartSize);
+				$('#unique-shopping-cart').html(String(cartSize))
+			}
+
+			function decrementCart() {
+
+				let cartSize = 0;
+				if (localStorage.getItem('shoppingCartSize')) {
+			        cartSize = localStorage.getItem('shoppingCartSize');
+			    }
+
+			    cartSize--;
+			    
+			    if(cartSize < 0) {
+			    	cartSize = 0;
+			    }
+
+				localStorage.setItem('shoppingCartSize', cartSize);
+				$('#unique-shopping-cart').html(String(cartSize))
+			}
+		</script>
+		<style>
+			.row {
+    		margin: 5%;
+			}
+		</style>
+
+		</head>
+
+		<body>
+			<header>
+		        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+		            <div class="container-fluid">
+		            	<a class="navbar-brand" href="../index.html">
+	                    <img src="../imgs/smallbugs/bug-basket.png" alt="logo" class="img-fluid"/></a>
+		                
+		                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		                    <span class="navbar-toggler-icon"></span>
+		                </button>
+
+		                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		                        <li class="nav-item">
+		                            <a class="nav-link" href="shop.html">Shop</a>
+		                        </li>
+		                        <li class="nav-item">
+		                            <a class="nav-link" href="about.html">About</a>
+		                        </li>
+		                        <li class="nav-item">
+		                            <a class="nav-link" aria-current="page">Blog</a>
+		                        </li>
+		                    </ul>
+		                    <ul class="navbar-nav ml-auto">
+						     	<li class="nav-item">
+						        	<a href="checkout.html" class="nav-link navbar-link-2 waves-effect">
+				          	<span id="unique-shopping-cart" class="badge badge-pill"></span>
+						          	<i class="fas fa-shopping-cart pl-0"></i>
+						        	</a>
+						        </li>
+						    </ul>          
+		                </div>
+		            </div>
+		        </nav>
+        	</header>
+ 
+ 			<main>
+ 				<!--Section: Block Content-->
+				<section class="mb-5">
+
+				  <div class="row">
+				    <div class="col-md-6 mb-4 mb-md-0">
+				        <div class="row product-gallery mx-1">
+				          	<div class="col-12 mb-0">
+				            	<figure class="view overlay rounded z-depth-1 main-img">
+				              	<a href="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15a.jpg"
+				                data-size="710x823">
+				                <img src="../imgs/bugs/beetle-art.jpg"
+				                  class="img-fluid z-depth-1">
+				              	</a>
+				            	</figure>
+				        	</div>
+			        	</div>
+			    	</div>
+
+
+			    	<div class="col-md-4">
+				      <h5>Beetle Art</h5>
+				      <p><span class="mr-1"><strong>$200</strong></span></p>
+				      <p class="pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit
+				        error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam. Distinctio,
+				        officia quis dolore quos sapiente tempore alias.</p>
+				      <div class="table-responsive">
+				        <table class="table table-sm table-borderless mb-0">
+				          <tbody>
+				            <tr>
+				              <th class="pl-0 w-25" scope="row"><strong>Species</strong></th>
+				              <td>Mixed</td>
+				            </tr>
+				            <tr>
+				              <th class="pl-0 w-25" scope="row"><strong>Delivery</strong></th>
+				              <td>USA</td>
+				            </tr>
+				          </tbody>
+				        </table>
+				      </div>
+
+				      <button type="button" class="btn btn-light btn-md mr-1 mb-2" onclick="incrementCart()"><i
+				          class="fas fa-shopping-cart pr-2 "></i>Add to cart</button>
+		    		</div>
+				</section>
+				<!--Section: Block Content-->
+ 			</main>
+
+					    <!-- Footer -->
+			<footer>
+				<div class="py-5 text-center">
+					<div class="row">
+						<div class="link-container">
+					    	<div class="FAQ">
+					    		<h5>Questions?</h5>
+						    	<a href="faq.html">F.A.Q.s</a>
+						    </div>
+
+						    <div class="divider">
+						    	<p>|</p>
+						    </div>
+
+					    	<div class="social-container">
+					    		<h5>Follow Us!</h5>
+							    <div class="social-footer">
+							    	<a href="http://twitter.com">
+							    		<i class="fab fa-twitter"></i>
+							    	</a>
+							    	<a href="http://instagram.com">
+							    		<i class="fab fa-instagram"></i>
+							    	</a>
+							    	<a href="http://facebook.com">
+							    		<i class="fab fa-facebook"></i>
+							    	</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Copyright -->
+					<div class="text-center"><h6>© 2021 Bug Basket</h6></div>
+                </div>
+			</footer>
+		</body>
+	</html>
+

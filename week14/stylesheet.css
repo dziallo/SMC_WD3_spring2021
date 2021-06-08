@@ -1,0 +1,74 @@
+.bg-light,
+.special-color-dark {
+	background: #fbdaa7!important;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+ul li {
+    display: inline-block;
+    padding: 5px 20px;
+    background-color: transparent;
+    transition: 500ms;
+}
+
+a {
+    text-decoration: none;
+}
+
+.jumbotron { 
+	margin: 0; 
+}
+
+.container {
+	width: 100vw;
+}
+
+.container > ul > li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.footercontainer {
+	align-content: center;
+
+}
+
+/*<!-- BLOG -->*/
+
+.cid-rbmdr8RGdl {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-color: #ffffff;
+}
+
+.card {
+    background-color: transparent;
+    border: none;
+}
+
+section {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*<!-- FAQ -->*/
+
+.cid-rblirAzonX {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    position: relative;
+}
+
+
+
+
+
+
+
