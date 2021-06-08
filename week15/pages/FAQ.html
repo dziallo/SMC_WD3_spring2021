@@ -1,61 +1,110 @@
 <!DOCTYPE html>
 	<html lang="en">
 		<head>
-			<meta charset="UTF-8">
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 			<meta name="viewport" content="width=device-width, intial-scale=1.0">
 			
-		    <!-- Bootstrap CSS -->
-		    <link 
-		    	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
-		    	rel="stylesheet" 
-		    	crossorigin="anonymous"
-		    />
-		    <link
-  				href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"
-			  	rel="stylesheet"
-			  	crossorigin="anonymous"
-			/>
-			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
-				rel="stylesheet"
-			/>
-			<link rel="stylesheet" href="../css/styles.css"
-				rel="stylesheet"
-			/>
+				<!-- Font Awesome -->
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+			<!-- Google Fonts -->
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+			<!-- Bootstrap core CSS -->
+			<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+
+			<!-- Material Design Bootstrap -->
+			<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+			
+			<link rel="stylesheet" href="../css/styles.css" rel="stylesheet"/>
+
+			<!-- JQuery -->
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<!-- Bootstrap tooltips -->
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+			<!-- Bootstrap core JavaScript -->
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+			<!-- MDB core JavaScript -->
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 			<title>Bug Basket FAQ</title>
 
+        	<script type="text/javascript">
+
+			document.addEventListener("DOMContentLoaded", function(){
+
+				let cartSize = 0;
+
+				if (localStorage.getItem('shoppingCartSize')) {
+			        cartSize = localStorage.getItem('shoppingCartSize');
+			    }
+
+				$('#unique-shopping-cart').html(String(cartSize))
+			});
+
+			function incrementCart() {
+
+				console.log("increment")
+				let cartSize = 0;
+				if (localStorage.getItem('shoppingCartSize')) {
+			        cartSize = localStorage.getItem('shoppingCartSize');
+			    }
+
+			    cartSize++;
+
+				localStorage.setItem('shoppingCartSize', cartSize);
+				$('#unique-shopping-cart').html(String(cartSize))
+			}
+
+			function decrementCart() {
+
+				let cartSize = 0;
+				if (localStorage.getItem('shoppingCartSize')) {
+			        cartSize = localStorage.getItem('shoppingCartSize');
+			    }
+
+			    cartSize--;
+			    
+			    if(cartSize < 0) {
+			    	cartSize = 0;
+			    }
+
+				localStorage.setItem('shoppingCartSize', cartSize);
+				$('#unique-shopping-cart').html(String(cartSize))
+			}
+			</script>
+
 			<style> 
-				
-				/*NAV*/
-
-				.bg-light {
-					background: #fbdaa7!important;
-				}
-
-				ul {
-		            list-style: none;
-		            padding-left: 0px;
-		        }
-
-		        ul li {
-		            display: inline-block;
-		            padding: 5px 20px;
-		            background-color: transparent;
-		            transition: 500ms;
-		        }
-
-		        a {
-		            text-decoration: none;
-		        }
-
 		        .cid-rblirAzonX {
 				    padding-top: 90px;
 				    padding-bottom: 90px;
 				    position: relative;
 				}
 
+				.media-container-row {
+					text-align: -webkit-center;
+				}
 
+				.panel-group, .mbr-form {
+					margin-top: 5%;
+				}
 
+				.display-5 {
+					color: black;
+				}
+
+				.map-container {
+					width: 100vw;
+				    text-align: center;
+				    margin-top: 5%;
+				    margin-bottom: 5%;
+				}
+
+				.col-md-3, .col-md-5 {
+					margin: 0 0 2% 0;
+				}
+
+				p {
+					text-align: left;
+				}
 
 			</style>
 		</head>
@@ -82,12 +131,18 @@
 		                        <li class="nav-item">
 		                            <a class="nav-link" href="blog.html">Blog</a>
 		                        </li>
-		                    </ul>          
+		                    </ul>
+		                    <ul class="navbar-nav ml-auto">
+						     	<li class="nav-item">
+						        	<a href="checkout.html" class="nav-link navbar-link-2 waves-effect">
+				          	<span id="unique-shopping-cart" class="badge badge-pill"></span>
+						          	<i class="fas fa-shopping-cart pl-0"></i>
+						        	</a>
+						        </li>
+						    </ul>          
 		                </div>
 		            </div>
 		        </nav>
-
-		        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
         	</header>
  
  			<main>
@@ -96,21 +151,21 @@
 				        <div class="media-container-row">
 				            <div class="col-12 col-md-8">
 				                <div class="section-head text-center space30">
-				                    <h2 class="mbr-section-title pb-5 mbr-fonts-style display-2"><strong>F.A.Q.</strong></h2>
+				                    <h1><strong>F.A.Q.</strong></h1>
 				                </div>
 				                <div class="clearfix"></div>
 				                <div id="bootstrap-accordion_5" class="panel-group accordionStyles accordion" role="tablist" aria-multiselectable="true">
 				                    <div class="card">
 				                        <div class="card-header" role="tab" id="headingOne">
 				                            <a role="button" class="panel-title collapsed text-black" data-toggle="collapse" data-core="" href="#collapse1_5" aria-expanded="false" aria-controls="collapse1">
-				                                <h4 class="mbr-fonts-style display-5">
-				                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>Do you have some additional courses?</h4>
+				                                <h4 class="display-5">
+				                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>Where do your insects come from?</h4>
 				                            </a>
 				                        </div>
 				                        <div id="collapse1_5" class="panel-collapse noScroll collapse " role="tabpanel" aria-labelledby="headingOne" data-parent="#bootstrap-accordion_5">
 				                            <div class="panel-body p-4">
-				                                <p class="mbr-fonts-style panel-text display-7">
-				                                   Answer your customers' questions in a polite and understandable form. Try to give&nbsp;complete information about your services to calm your clients.</p>
+				                                <p>
+				                                   All of our insects come from insect farms located all across the world, many in tropical regions.  These farms raise insects as a source of income instead of destroying the landscape and forests to log, farm, or raise livestock.  Simply put, farming saves rainforests and protects insect populations.  We are licensed with the US Fish & Wildlife Service and comply with all US and International Import/Export Laws and Regulations.  Buying butterflies and insects, dead or alive, has rules and regulations that we must be in compliance with.  Import and export requirements are regulated by The US Fish and Wildlife Service and further by International Law and Treaties that the US Government has entered into with other nations.</p>
 				                            </div>
 				                        </div>
 				                    </div>
@@ -118,14 +173,14 @@
 				                        <div class="card-header" role="tab" id="headingTwo">
 				                            <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-core="" href="#collapse2_5" aria-expanded="false" aria-controls="collapse2">
 				                                <h4 class="mbr-fonts-style display-5">
-				                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>Do you offer distance learning courses?</h4>
+				                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>Are the insects killed?</h4>
 				                            </a>
 				                            
 				                        </div>
 				                        <div id="collapse2_5" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#bootstrap-accordion_5">
 				                            <div class="panel-body p-4">
-				                                <p class="mbr-fonts-style panel-text display-7">
-				                                   Please note that some customers visit your site for the first time.&nbsp;</p>
+				                                <p>
+				                                   Many insects have short lifespans. Some insect specimens live only a few weeks as an adult, others only a few days. Most of our butterflies and insects come from Insect Farms where the specimens are taken through their whole life-cycle and bred to ensure a new generation before death. Those specimens that do not die of natural causes are humanely killed. Specimens that are not from farms come only from licensed breeders and professional field collectors, this helps ensure our material is sustainably and ethically sourced. Your purchases will help the farming industry continue without threats to the natural wild populations of butterflies and insects. Please know that the biggest threat to the survival of most everything living creature on this planet, including insects, remains habitat loss. Unlike birds and mammals for instance, who have smaller numbers of young and often only one group of offspring per season, insects often have large numbers of offspring and can have multiple generations per season. Insect collecting in any given habitat will not pose a significant threat to that species survival. Insects disappear from an area when they lose habitat and thus their host plants and food source. Other factors affecting insect populations are environmental pollution and agricultural chemicals. If insects are dear to your heart you can get involved by helping preserve natural areas in or around your local community and across the world. Leaving some wild flowers and weeds in your yard or planting them is a great way to give insects a boost!</p>
 				                            </div>
 				                        </div>
 				                    </div>
@@ -133,12 +188,82 @@
 				                        <div class="card-header" role="tab" id="headingThree">
 				                            <a role="button" class="collapsed text-black panel-title" data-toggle="collapse" data-core="" href="#collapse3_5" aria-expanded="false" aria-controls="collapse3">
 				                                <h4 class="mbr-fonts-style display-5">
-				                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>Write your customer's question here</h4>
+				                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>Are the insects endangered?</h4>
 				                            </a>
 				                        </div>
 				                        <div id="collapse3_5" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#bootstrap-accordion_5">
 				                            <div class="panel-body p-4">
-				                                <p class="mbr-fonts-style panel-text display-7">Tell more about your course.</p>
+				                                <p>We do not work with insects that are endangered or restricted. There are strict laws protecting endangered species in many countries, including insects.  Many countries require permits, and customs forms to sell insects internationally.  We only use insects from farms that file the proper documentation for legal insect sales. Our shipments from outside the US are inspected for compliance with these rules and regulations. Insect farms are also part of the conservation effort for many insect species, as they help ensure that those insect will be found in the wild for years to come. Our support and yours for their operations and livelihood will ensure that these insect farmers remain good stewards who can run a sustainable and environmentally friendly business in geographic areas that often do not value those ideals.</p>
+				                            </div>
+				                        </div>
+				                    </div>
+				                    <div class="card">
+				                        <div class="card-header" role="tab" id="headingFour">
+				                            <a role="button" class="panel-title collapsed text-black" data-toggle="collapse" data-core="" href="#collapse4_5" aria-expanded="false" aria-controls="collapse1">
+				                                <h4 class="display-5">
+				                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>Do you spread, pin, and mount the insects yourself?</h4>
+				                            </a>
+				                        </div>
+				                        <div id="collapse4_5" class="panel-collapse noScroll collapse " role="tabpanel" aria-labelledby="headingOne" data-parent="#bootstrap-accordion_5">
+				                            <div class="panel-body p-4">
+				                                <p>
+				                                   Yes!  We do all of the delicate work by hand, in house.  This includes all of the re-hydration, spreading, pinning, posing, and mounting.  Each leg, wing, and antennae are repositioned to make sure each specimen look their best.</p>
+				                            </div>
+				                        </div>
+				                    </div>
+				                    <div class="card">
+				                        <div class="card-header" role="tab" id="headingFive">
+				                            <a role="button" class="panel-title collapsed text-black" data-toggle="collapse" data-core="" href="#collapse5_5" aria-expanded="false" aria-controls="collapse1">
+				                                <h4 class="display-5">
+				                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>Do you use eco friendly materials?</h4>
+				                            </a>
+				                        </div>
+				                        <div id="collapse5_5" class="panel-collapse noScroll collapse " role="tabpanel" aria-labelledby="headingOne" data-parent="#bootstrap-accordion_5">
+				                            <div class="panel-body p-4">
+				                                <p>
+				                                   We do our best to be green here at Bug Basket, and we try to use responsible materials whenever possible.  The wood used in all our frames is FSC certified and the paper backing we mount all our insects on is made using acid-free hydroelectric power. We use eco-friendly packing paper in every box we ship, and you can help us by recycling the box and packing materials after they arrive.  All our business cards and promotional materials are printed on recycled paper. </p>
+				                            </div>
+				                        </div>
+				                    </div>
+				                    <div class="card">
+				                        <div class="card-header" role="tab" id="headingFive">
+				                            <a role="button" class="panel-title collapsed text-black" data-toggle="collapse" data-core="" href="#collapse6_5" aria-expanded="false" aria-controls="collapse1">
+				                                <h4 class="display-5">
+				                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>Where do you get your frames?</h4>
+				                            </a>
+				                        </div>
+				                        <div id="collapse6_5" class="panel-collapse noScroll collapse " role="tabpanel" aria-labelledby="headingOne" data-parent="#bootstrap-accordion_5">
+				                            <div class="panel-body p-4">
+				                                <p>
+				                                   We handcraft each shadowbox frame to fit and match our insects.  This means we measure each and every specimen before our cases are cut, assembled, and painted.</p>
+				                            </div>
+				                        </div>
+				                    </div>
+				                    <div class="card">
+				                        <div class="card-header" role="tab" id="headingSix">
+				                            <a role="button" class="panel-title collapsed text-black" data-toggle="collapse" data-core="" href="#collapse7_5" aria-expanded="false" aria-controls="collapse1">
+				                                <h4 class="display-5">
+				                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>How do I know where my insect is from?</h4>
+				                            </a>
+				                        </div>
+				                        <div id="collapse7_5" class="panel-collapse noScroll collapse " role="tabpanel" aria-labelledby="headingOne" data-parent="#bootstrap-accordion_5">
+				                            <div class="panel-body p-4">
+				                                <p>
+				                                   All of the details of your insect is included on the back of our cases.  You go home with the common name, scientific name, and country of origin.  We also sign and number each piece, because they are all unique.</p>
+				                            </div>
+				                        </div>
+				                    </div>
+				                    <div class="card">
+				                        <div class="card-header" role="tab" id="headingSix">
+				                            <a role="button" class="panel-title collapsed text-black" data-toggle="collapse" data-core="" href="#collapse8_5" aria-expanded="false" aria-controls="collapse1">
+				                                <h4 class="display-5">
+				                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>What is your shipping, exchange, and return policy?</h4>
+				                            </a>
+				                        </div>
+				                        <div id="collapse8_5" class="panel-collapse noScroll collapse " role="tabpanel" aria-labelledby="headingOne" data-parent="#bootstrap-accordion_5">
+				                            <div class="panel-body p-4">
+				                                <p>
+				                                   As all pieces are unique and hard to source, all sales are final.  No refunds, or exchanges will be given.  Products shipped by Bug Basket are all insured for proper delivery.  We use the United States Postal Service for all shipping needs, as they are proven to be the kindest to our packages.  It is very rare for packages to arrive damaged.  In the event that a products arrives to you damaged, please send us photos of the original packaging, and damaged product photos to bugbasket@gmail.com.  Damaged product photos must be sent within 24 hours of delivery to be eligible.  Specimen may be repaired or replaced at our discretion.  Repaired or replaced specimen are completed in the order they are received, we do not guarantee return times, as these are all handmade, sourced worldwide, and take time to complete.  Return shipping will be refunded if sent through the United States Postal Service, and a receipt is submitted to our email.  Please note that products may be submitted for repair for a small charge, if the damages were incurred by the customer.  If you have an accident with your new purchase, simply be honest and will be glad to repair or replace the specimen.  We love keeping our clients happy, and make every effort to help in any way we can, if you have a question just let us know!</p>
 				                            </div>
 				                        </div>
 				                    </div>
@@ -153,23 +278,27 @@
 				        <div class="media-container-row">
 				            <div class="col-md-10 col-lg-8 block-content">
 				                <div data-form-type="formoid">
-				                    <h2 class="mbr-fonts-style mb-4 display-2">Contact Us</h2>
-				                    <h3 class="mbr-section-subtitle mbr-fonts-style mb-4 mbr-light display-7">
-				                        We will not share your data. Our manager will get back to you soon.</h3>
+				                    <h1><strong>More questions? Contact us here!</strong></h1>
+				                    
 				                    <div data-form-alert="" hidden="">Thanks for filling out the form!</div>
 				                    <form class="block mbr-form" action="https://mobirise.com/" method="post" data-form-title="Mobirise Form"><input type="hidden" name="email" data-form-email="true" value="PUt1YAP27AHQVY+yassAJ2DHtbim1O2KmseAX+GZJlvVjc5UMSApD4eemYjdqOA0DHa9th9KB1ox9moH1pMrGb0weetBycsMMawkVZ7MWbjllh9mKLxK7SUZHGAE943m">
 				                        <div class="row">
-				                            <div class="col-md-12" data-for="name">
+				                            <div class="col-md-3" data-for="name">
 				                                <input type="text" class="form-control input" name="name" data-form-field="Name" placeholder="Name" required="" id="name-form3-j">
 				                            </div>
-				                            <div class="col-md-12" data-for="email">
+			                            </div>
+			                           	<div class="row">
+				                            <div class="col-md-5" data-for="email">
 				                                <input type="text" class="form-control input" name="email" data-form-field="Email" placeholder="Email" required="" id="email-form3-j">
 				                            </div>
-				                            <div class="col-md-12" data-for="message">
-				                                <textarea class="form-control input" name="message" rows="3" data-form-field="Message" placeholder="Message" style="resize:none" id="message-form3-j"></textarea>
-				                            </div>
-				                            <div class="input-group-btn col-md-12 mt-2"><button href="" type="submit" class="btn btn-form btn-bgr btn-warning display-4">Submit</button></div>
 				                        </div>
+				                        <div class="row">
+				                            <div class="col-md-12" data-for="message">
+				                                <textarea class="form-control input" name="message" rows="5" data-form-field="Message" placeholder="Message" style="resize:none" id="message-form3-j"></textarea>
+				                            </div>
+				                            <div class="input-group-btn col-md-12 mt-2"><button href="" type="submit" class="btn btn-form btn-bgr btn-primary display-4">Submit</button></div>
+				                        </div>
+
 				                    </form>
 				                </div>
 				            </div>
@@ -177,7 +306,7 @@
 				    </div>
 				</section>
 
-				<section> 
+				<section class="map-container"> 
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.4587678843923!2d-118.34916344958421!3d34.08338608050218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bed54d7b272f%3A0x47890ae799e3206c!2sNecromance!5e0!3m2!1sen!2sus!4v1623039044031!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 				</section>
 
